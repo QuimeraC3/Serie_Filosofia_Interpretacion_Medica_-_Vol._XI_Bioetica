@@ -1,0 +1,21 @@
+B10-XI v1.0-R1 — FINAL PACKAGE INTEGRITY REPORT
+
+Corrective revision: MC-01
+Nature: packaging/materialization correction only.
+Frozen content artifacts modified: NO
+
+Required content:
+- RDC-XI-v1.0.pdf: INCLUDED
+- RDC-XI-v1.0.docx: INCLUDED
+- manifest.json: INCLUDED
+- INTEGRITY_REPORT.txt: INCLUDED
+
+Frozen SHA-256:
+PDF:  ab6de4fe7e30c7a276c21340bafbf2857f08d91c355c1119bbea82b1d69c112d
+DOCX: 173099ea4a2c98087b4c9dedbc699d5c1d95fd75dbe2be26b94db4794286e40b
+
+QR status:
+BLOCKED UNTIL B10-SIT v1.0 COMPLETION
+
+Rule:
+Any substantive change to RDC-XI requires a new content version.

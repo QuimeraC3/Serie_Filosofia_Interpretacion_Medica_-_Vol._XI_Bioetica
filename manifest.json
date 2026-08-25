@@ -1,0 +1,16 @@
+{
+  "package_id": "B10-XI",
+  "package_revision": "v1.0-R1",
+  "content_version": "RDC-XI v1.0",
+  "status": "CORRECTIVE_PACKAGING_REVISION",
+  "correction": {
+    "id": "MC-01",
+    "description": "INTEGRITY_REPORT.txt was omitted from the previous ZIP because it was generated after ZIP creation.",
+    "content_artifacts_changed": false
+  },
+  "frozen_artifacts": {
+    "documentos/RDC-XI-v1.0.pdf": "ab6de4fe7e30c7a276c21340bafbf2857f08d91c355c1119bbea82b1d69c112d",
+    "documentos/RDC-XI-v1.0.docx": "173099ea4a2c98087b4c9dedbc699d5c1d95fd75dbe2be26b94db4794286e40b"
+  },
+  "qr_status": "BLOCKED_UNTIL_B10-SIT_v1.0_COMPLETION"
+}
