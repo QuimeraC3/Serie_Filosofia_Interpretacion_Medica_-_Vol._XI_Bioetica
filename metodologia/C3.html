@@ -1,9 +1,244 @@
-<!doctype html>
-<html lang="es"><head><meta charset="utf-8"><title>C³ — Volumen XI</title></head>
-<body style="font-family:Arial,Helvetica,sans-serif;max-width:850px;margin:40px auto;padding:0 20px;line-height:1.55">
-<h1>C³ — Identidad metodológica</h1>
-<p>C³ se presenta como una arquitectura metodológica abierta para organizar el análisis y la deliberación bioética. No constituye una teoría ética particular ni determina automáticamente una decisión correcta.</p>
-<h2>Principio de neutralidad metodológica</h2>
-<p>La arquitectura puede incorporar distintos marcos éticos según la naturaleza, contexto y exigencias del problema. La incorporación de una lente responde a su pertinencia, no a una obligación de utilizar todas las corrientes en todos los casos.</p>
-<p><a href="../index.html">← Volver a B10</a></p>
-</body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C³ — Identidad Metodológica &bull; Volumen XI: Bioética</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --primary: #0f766e;
+            --primary-hover: #115e59;
+            --accent: #d97706;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* -------------------------------------------------- */
+        /* NAVEGACIÓN SUPERIOR                                */
+        /* -------------------------------------------------- */
+        .top-bar {
+            background-color: #0b1329;
+            padding: 0.75rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .top-bar-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #94a3b8;
+        }
+
+        .series-tag {
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* -------------------------------------------------- */
+        /* ENCABEZADO CON ESTILO DEL VOLUMEN                  */
+        /* -------------------------------------------------- */
+        header {
+    background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)), url('../banner.jpeg');
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    min-height: 260px;
+    padding: 4rem 2rem 3rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--primary);
+}
+
+        .vol-badge {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        header p {
+            font-size: 1.15rem;
+            color: #ffffff;
+            font-weight: 500;
+            max-width: 750px;
+            margin: 0 auto;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* -------------------------------------------------- */
+        /* CONTENIDO                                          */
+        /* -------------------------------------------------- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .info-panel {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .info-panel h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-panel h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .info-panel p {
+            color: var(--text-main);
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* -------------------------------------------------- */
+        /* PIE DE PÁGINA                                      */
+        /* -------------------------------------------------- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #0f172a;
+            color: #ffffff;
+            font-size: 0.875rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barrita de navegación hacia la página principal del Volumen XI -->
+    <nav class="top-bar">
+        <div class="top-bar-container">
+            <a href="../index.html" class="back-link">
+                &larr; Volver al Volumen XI
+            </a>
+            <span class="series-tag">Serie: Filosofía Aplicada a la Interpretación Médica</span>
+        </div>
+    </nav>
+
+    <!-- Encabezado de la Sección Metodológica -->
+    <header>
+        <span class="vol-badge">&bull; Metodología &bull;</span>
+        <h1>C³ — Identidad Metodológica</h1>
+        <p>Marcos de interpretación conceptual y estructura procedimental para el análisis bioético.</p>
+    </header>
+
+    <main class="container">
+
+        <article class="info-panel">
+            <h2>Marco Conceptual C³</h2>
+            <p>
+                C³ se presenta como una arquitectura metodológica abierta para organizar el análisis y la deliberación bioética. No constituye una teoría ética particular ni determina automáticamente una decisión correcta.
+            </p>
+
+            <h2>Principio de Neutralidad Metodológica</h2>
+            <p>
+                La arquitectura puede incorporar distintos marcos éticos según la naturaleza, contexto y exigencias del problema. La incorporación de una lente responde a su pertinencia, no a una obligación de utilizar todas las corrientes en todos los casos.
+            </p>
+        </article>
+
+        <!-- Botón de regreso -->
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="../index.html" class="btn-back">
+                &larr; Regresar al Volumen XI: Bioética
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; Serie Filosofía Aplicada a la Interpretación Médica &bull; &copy; 2026 Dr.C. Cesar Cerezo Camacho. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+            <a href="../index.html">REGRESAR AL VOLUMEN XI</a>
+        </p>
+    </footer>
+
+</body>
+</html>
