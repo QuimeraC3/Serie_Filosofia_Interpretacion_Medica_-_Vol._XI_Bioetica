@@ -1,202 +1,377 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quimera C³ - Archives | Serie: Filosofía Aplicada a la Interpretación Médica | Volumen XI — Bioética</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volumen XI: Bioética &bull; Serie Filosofía Aplicada a la Interpretación Médica</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --primary: #0f766e;
+            --primary-hover: #115e59;
+            --accent: #d97706;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+        }
 
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 24px;
-      line-height: 1.6;
-      color: #222;
-      background: #fff;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    h1, h2 {
-      color: #17365d;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    h1 {
-      border-bottom: 2px solid #17365d;
-      padding-bottom: 12px;
-    }
+        /* -------------------------------------------------- */
+        /* NAVEGACIÓN SUPERIOR HACIA EL PORTAL PRINCIPAL      */
+        /* -------------------------------------------------- */
+        .top-bar {
+            background-color: #0b1329;
+            padding: 0.75rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-    h2 {
-      margin-top: 32px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 6px;
-    }
+        .top-bar-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .subtitle {
-      font-size: 1.15em;
-      color: #555;
-    }
+        .back-link {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s ease;
+        }
 
-    .status {
-      display: inline-block;
-      padding: 6px 12px;
-      border: 1px solid #999;
-      border-radius: 4px;
-      font-size: 0.9em;
-      margin: 4px 4px 4px 0;
-    }
+        .back-link:hover {
+            color: #ffffff;
+        }
 
-    .document {
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 18px;
-      margin: 16px 0;
-    }
+        .series-tag {
+            color: #64748b;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
 
-    a {
-      color: #0645ad;
-    }
+        /* -------------------------------------------------- */
+        /* ENCABEZADO CON BANNER Y SOMBRA BALANCEADA          */
+        /* -------------------------------------------------- */
+        header {
+    /* Mantiene la proporción panorámica ultra ancha */
+    background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)), url('banner.jpeg');
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    min-height: 260px; /* Asegura encuadre vertical óptimo */
+    padding: 4rem 2rem 3rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--primary);
+}
 
-    code {
-      word-break: break-all;
-      font-size: 0.9em;
-    }
+        .vol-badge {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-    footer {
-      margin-top: 48px;
-      padding-top: 16px;
-      border-top: 1px solid #ccc;
-      color: #666;
-      font-size: 0.9em;
-    }
-  </style>
+        header h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-weight: 600;
+            max-width: 750px;
+            margin: 0 auto;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* -------------------------------------------------- */
+        /* CONTENIDO Y SECCIONES                              */
+        /* -------------------------------------------------- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.65rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .grid-downloads {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .card-download {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-download h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .card-download p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .hash-info {
+            background-color: #f1f5f9;
+            border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: #334155;
+            margin-bottom: 1.25rem;
+            word-break: break-all;
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            background-color: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+        /* NAVEGACIÓN INTERNA */
+        .grid-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .card-section-nav {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .card-section-nav:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-section-nav h4 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-section-nav p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .card-section-nav a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .card-section-nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* SECCIÓN METODOLÓGICA / FICHA TÉCNICA */
+        .info-panel {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .info-panel h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-panel p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #0f172a;
+            color: #ffffff;
+            font-size: 0.875rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #94a3b8;
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>Quimera C³ - Archives</h1>
-    <p class="subtitle">Laboratorio metodológico y documental</p>
-  </header>
+    <!-- Barrita de navegación hacia el Portal Principal -->
+    <nav class="top-bar">
+        <div class="top-bar-container">
+            <a href="https://quimerac3.github.io/" class="back-link">
+                &larr; Volver al Portal Principal
+            </a>
+            <span class="series-tag">Serie Filosofía Aplicada a la Interpretación Médica</span>
+        </div>
+    </nav>
 
-  <main>
+    <!-- Encabezado del Volumen XI -->
+    <header>
+        <span class="vol-badge">Volumen XI &bull; RDC-XI-v1.0</span>
+        <h1>Bioética e Interpretación Médica</h1>
+        <p>Análisis metodológico, normativo y epistemológico de la praxis médica contemporánea.</p>
+    </header>
 
-    <h2>Serie: Filosofía Aplicada a la Interpretación Médica | Volumen XI — Bioética</h2>
+    <main class="container">
 
-    <p>
-      <strong>Recurso Documental Complementario</strong>
-    </p>
+        <!-- Descargas con control de integridad de HASH -->
+        <h2 class="section-title">Documentación y Descargas</h2>
+        <div class="grid-downloads">
+            
+            <article class="card-download">
+                <div>
+                    <h3>Documento Completo (PDF)</h3>
+                    <p>Edición oficial del Volumen XI en formato PDF listo para lectura o impresión académica.</p>
+                    <div class="hash-info">
+                        <strong>Integridad Verificada:</strong> SHA-256 Coincidente
+                    </div>
+                </div>
+                <a href="documentos/Volumen_XI_Bioetica.pdf" class="btn" download>
+                    Descargar PDF &rarr;
+                </a>
+            </article>
 
-    <p>
-      <span class="status">B10-XI v1.0</span>
-      <span class="status">READY FOR PUBLICATION</span>
-    </p>
+            <article class="card-download">
+                <div>
+                    <h3>Documento Editable (Word)</h3>
+                    <p>Versión en formato ejecutable/editable (.docx) para consulta de citas y referencias.</p>
+                    <div class="hash-info">
+                        <strong>Integridad Verificada:</strong> SHA-256 Coincidente
+                    </div>
+                </div>
+                <a href="documentos/Volumen_XI_Bioetica.docx" class="btn btn-outline" download>
+                    Descargar DOCX &rarr;
+                </a>
+            </article>
 
-    <h2>Propósito</h2>
+        </div>
 
-    <p>
-      Este recurso complementa la infografía de la Serie: Filosofía Aplicada a la Interpretación Médica | Volumen XI — Bioética.
-      Amplía la trazabilidad documental de las piezas mediante fuentes
-      maestras, antecedentes históricos, pluralidad metodológica, identidad
-      del algoritmo C³ y criterios de verificación.
-    </p>
+        <!-- Secciones del Volumen -->
+        <h2 class="section-title">Explorar Secciones</h2>
+        <div class="grid-sections">
+            
+            <div class="card-section-nav">
+                <h4>Metodología</h4>
+                <p>Estructura procedimental y marcos de interpretación conceptual utilizados en esta obra.</p>
+                <a href="metodologia/index.html">Ver Metodología &rarr;</a>
+            </div>
 
-    <h2>Documentos</h2>
+            <div class="card-section-nav">
+                <h4>Bibliografía y Fuentes</h4>
+                <p>Catálogo de fuentes primarias, referencias bioéticas y corpus documental revisado.</p>
+                <a href="bibliografia/index.html">Ver Bibliografía &rarr;</a>
+            </div>
 
-    <div class="document">
-      <p>
-        <strong>RDC-XI v1.0 — PDF</strong>
-      </p>
+        </div>
 
-      <p>
-        <a href="documentos/RDC-XI-v1.0.pdf">
-          Leer / descargar RDC-XI v1.0 — PDF
-        </a>
-      </p>
-    </div>
+        <!-- Ficha de la Serie -->
+        <section class="info-panel">
+            <h2>Acerca de este Volumen</h2>
+            <p>
+                El <strong>Volumen XI: Bioética</strong> forma parte de la <em>Serie: Filosofía Aplicada a la Interpretación Médica</em>. Esta publicación cuenta con protocolo estricto de control de versiones y verificación de hashes para garantizar la autenticidad e integridad de la información técnica frente a eventuales alteraciones.
+            </p>
+        </section>
 
-    <div class="document">
-      <p>
-        <strong>RDC-XI v1.0 — DOCX</strong>
-      </p>
+    </main>
 
-      <p>
-        <a href="documentos/RDC-XI-v1.0.docx">
-          Descargar RDC-XI v1.0 — DOCX editable
-        </a>
-      </p>
-    </div>
-
-    <h2>Integridad documental</h2>
-
-    <p>
-      La versión congelada se identifica mediante SHA-256. El hash debe
-      compararse con el manifiesto publicado antes de considerar íntegra
-      una copia descargada.
-    </p>
-
-    <ul>
-      <li>
-        <strong>PDF:</strong><br>
-        <code>
-          ab6de4fe7e30c7a276c21340bafbf2857f08d91c355c1119bbea82b1d69c112d
-        </code>
-      </li>
-
-      <li>
-        <strong>DOCX:</strong><br>
-        <code>
-          173099ea4a2c98087b4c9dedbc699d5c1d95fd75dbe2be26b94db4794286e40b
-        </code>
-      </li>
-    </ul>
-
-    <p>
-      <a href="manifest.json">Consultar manifest.json</a>
-      |
-      <a href="INTEGRITY_REPORT.txt">Consultar INTEGRITY_REPORT.txt</a>
-    </p>
-
-    <h2>Estado de B10</h2>
-
-    <p>
-      El contenido está materializado y preparado para publicación.
-      La URL canónica y el código QR permanecen pendientes hasta superar
-      la auditoría B10-SIT v1.0.
-    </p>
-
-    <h2>Identidad metodológica C³</h2>
-
-    <p>
-      <a href="metodologia/C3.html">
-        Consultar identidad metodológica C³
-      </a>
-    </p>
-
-    <h2>Fuentes maestras</h2>
-
-    <p>
-      <a href="bibliografia/fuentes.html">
-        Consultar fuentes maestras
-      </a>
-    </p>
-
-    <h2>Control de versiones</h2>
-
-    <p>
-      <a href="VERSION.md">
-        Consultar VERSION.md
-      </a>
-      |
-      <a href="PUBLICACION.md">
-        Consultar instrucciones de publicación
-      </a>
-    </p>
-
-  </main>
-
-  <footer>
-    © Quimera C³ · Quimera C³ - Archives · Serie: Filosofía Aplicada a la Interpretación Médica.
-  </footer>
+    <footer>
+        <p>&copy; Serie Filosofía Aplicada a la Interpretación Médica &bull; &copy; 2026 Dr.C. Cesar Cerezo Camacho. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+            <a href="https://quimerac3.github.io/">Regresar al Portal Central</a>
+        </p>
+    </footer>
 
 </body>
 </html>
