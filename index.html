@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quimera — Volumen XI: Bioética en la Interpretación Médica. Análisis metodológico, normativo y epistemológico.">
     <title>Volumen XI: Bioética &bull; Serie Filosofía Aplicada a la Interpretación Médica</title>
     <style>
         :root {
@@ -18,6 +19,10 @@
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -31,58 +36,67 @@
             line-height: 1.6;
         }
 
-        /* -------------------------------------------------- */
-        /* NAVEGACIÓN SUPERIOR HACIA EL PORTAL PRINCIPAL      */
-        /* -------------------------------------------------- */
+        /* NAVEGACIÓN SUPERIOR */
         .top-bar {
             background-color: #0b1329;
-            padding: 0.75rem 2rem;
+            padding: 0.85rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .top-bar-container {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .back-link {
+        .brand-logo {
             color: #ffffff;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.1rem;
+            font-weight: 700;
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            letter-spacing: -0.01em;
             transition: color 0.2s ease;
         }
 
-        .back-link:hover {
-            color: #ffffff;
+        .brand-logo:hover {
+            color: #38bdf8;
         }
 
-        .series-tag {
-            color: #ffffff;
+        .nav-links {
+            display: flex;
+            gap: 1.25rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
+            transition: color 0.2s ease;
         }
 
-        /* -------------------------------------------------- */
-        /* ENCABEZADO CON BANNER Y SOMBRA BALANCEADA          */
-        /* -------------------------------------------------- */
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* ENCABEZADO CON BANNER */
         header {
-    /* Mantiene la proporción panorámica ultra ancha */
-    background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)), url('banner.jpeg');
-    background-size: cover;
-    background-position: center center;
-    color: #ffffff;
-    min-height: 260px; /* Asegura encuadre vertical óptimo */
-    padding: 4rem 2rem 3rem 2rem;
-    text-align: center;
-    border-bottom: 4px solid var(--primary);
-}
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.10)), url('banner.jpeg');
+            background-size: cover;
+            background-position: center center;
+            color: #ffffff;
+            min-height: 260px;
+            padding: 4rem 2rem 3rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+        }
 
         .vol-badge {
             display: inline-block;
@@ -116,9 +130,7 @@
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
         }
 
-        /* -------------------------------------------------- */
-        /* CONTENIDO Y SECCIONES                              */
-        /* -------------------------------------------------- */
+        /* CONTENIDO Y SECCIONES */
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -270,38 +282,55 @@
             font-size: 0.95rem;
         }
 
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                padding: 3.5rem 1.5rem;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .top-bar-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        /* PIE DE PÁGINA (TEXTO BLANCO) */
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             background-color: #0f172a;
             color: #ffffff;
             font-size: 0.875rem;
-            margin-top: 3rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        footer a {
-    color: #ffffff;
-    text-transform: uppercase;
-    text-decoration: underline;
-}
+        footer p {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Barrita de navegación hacia el Portal Principal -->
+    <!-- Navegación Superior -->
     <nav class="top-bar">
         <div class="top-bar-container">
-            <a href="https://quimerac3.github.io/" class="back-link">
-                &larr; Volver al Portal Principal
-            </a>
-            <span class="series-tag">Serie: Filosofía Aplicada a la Interpretación Médica</span>
+            <a href="https://quimerac3.github.io/" class="brand-logo">QUIMERA - Inicio General</a>
+            <ul class="nav-links">
+                <li><a href="https://quimerac3.github.io/QuimeraC3-IM-S01-FAIM/">Catálogo de Volúmenes</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Encabezado del Volumen XI -->
     <header>
         <span class="vol-badge">&bull; Volumen XI &bull;</span>
-        <h1>Bioética en la Interpretación Médica.</h1>
+        <h1>Bioética en la Interpretación Médica</h1>
         <p>Análisis metodológico, normativo y epistemológico de la praxis en la interpretación médica contemporánea.</p>
     </header>
 
@@ -367,11 +396,10 @@
 
     </main>
 
+    <!-- Pie de Página Visible en Letra Blanca -->
     <footer>
-        <p>&copy; Serie Filosofía Aplicada a la Interpretación Médica &bull; &copy; 2026 Dr.C. Cesar Cerezo Camacho. Todos los derechos reservados.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem;">
-            <a href="https://quimerac3.github.io/">Regresar al Portal Central</a>
-        </p>
+        <p>&copy; 2026 Instituto Quimera &bull; Centro de Investigación, Docencia, Servicio y Difusión.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #ffffff;">Dr.C. Cesar Cerezo Camacho. Todos los derechos reservados.</p>
     </footer>
 
 </body>
