@@ -36,7 +36,10 @@
         /* -------------------------------------------------- */
         .top-bar {
             background-color: #0b1329;
-            padding: 0.75rem 2rem;
+            padding: 0.85rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -48,32 +51,43 @@
             align-items: center;
         }
 
-        .back-link {
+        .brand-logo {
             color: #ffffff;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.1rem;
+            font-weight: 700;
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            letter-spacing: -0.01em;
             transition: color 0.2s ease;
         }
 
-        .back-link:hover {
-            color: #94a3b8;
+        .brand-logo:hover {
+            color: #38bdf8;
         }
 
-        .series-tag {
+        .nav-links {
+            display: flex;
+            gap: 1.25rem;
+            list-style: none;
+        }
+
+        .nav-links a {
             color: #ffffff;
+            text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
         }
 
         /* -------------------------------------------------- */
         /* ENCABEZADO CON IMAGEN Y SOMBRA BALANCEADA          */
         /* -------------------------------------------------- */
         header {
-            background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)), url('../banner.jpeg');
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.10)), url('../banner.jpeg');
             background-size: cover;
             background-position: center center;
             color: #ffffff;
@@ -180,36 +194,42 @@
         /* -------------------------------------------------- */
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             background-color: #0f172a;
             color: #ffffff;
             font-size: 0.875rem;
-            margin-top: 3rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        footer a {
+        footer p {
             color: #ffffff;
-            text-transform: uppercase;
-            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .top-bar-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Barrita de navegación hacia la página principal del Volumen XI -->
+    <!-- Barrita de navegación estandarizada -->
     <nav class="top-bar">
         <div class="top-bar-container">
-            <a href="../index.html" class="back-link">
-                &larr; Volver al Volumen XI
-            </a>
-            <span class="series-tag">Serie: Filosofía Aplicada a la Interpretación Médica</span>
+            <a href="https://quimerac3.github.io/" class="brand-logo">QUIMERA - Inicio General</a>
+            <ul class="nav-links">
+                <li><a href="https://quimerac3.github.io/QuimeraC3-IM-S01-FAIM-Vol11/index.html">Regresar al Volumen XI: Bioética</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Encabezado de la Sección Bibliográfica -->
     <header>
         <span class="vol-badge">&bull; Bibliografía &bull;</span>
-        <h1>Fuentes Maestras y Referencias</h1>
+        <h1>FUENTES MAESTRAS Y REFERENCIAS</h1>
         <p>Catálogo de fuentes primarias, referencias bioéticas y corpus documental revisado.</p>
     </header>
 
@@ -230,18 +250,17 @@
 
         <!-- Botón de regreso -->
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="../index.html" class="btn-back">
+            <a href="https://quimerac3.github.io/QuimeraC3-IM-S01-FAIM-Vol11/index.html" class="btn-back">
                 &larr; Regresar al Volumen XI: Bioética
             </a>
         </div>
 
     </main>
 
+    <!-- Pie de Página Estandarizado -->
     <footer>
-        <p>&copy; Serie Filosofía Aplicada a la Interpretación Médica &bull; &copy; 2026 Dr.C. Cesar Cerezo Camacho. Todos los derechos reservados.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem;">
-            <a href="../index.html">REGRESAR AL VOLUMEN XI</a>
-        </p>
+        <p>&copy; 2026 Instituto Quimera &bull; Centro de Investigación, Docencia, Servicio y Difusión.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #ffffff;">Dr.C. Cesar Cerezo Camacho. Todos los derechos reservados.</p>
     </footer>
 
 </body>
